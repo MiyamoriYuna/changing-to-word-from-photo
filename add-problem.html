@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問題を登録 | 問題集ノート</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">問題集ノート</a>
+
+    <nav>
+      <a href="materials.html">教材</a>
+      <a href="search.html">検索</a>
+      <a href="weak-problems.html">苦手問題</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="container narrow">
+
+  <div class="page-header">
+    <p class="section-label">ADD PROBLEM</p>
+    <h1>問題を登録</h1>
+
+    <p>
+      現在は手動入力版です。
+      後の段階で写真から問題文を自動入力できるようにします。
+    </p>
+  </div>
+
+
+  <section class="form-card">
+
+    <div class="form-group">
+      <label for="material">教材</label>
+
+      <select id="material">
+        <option>数学</option>
+        <option>英語</option>
+        <option>化学</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="subject">教科</label>
+
+      <select id="subject">
+        <option>数学</option>
+        <option>英語</option>
+        <option>化学</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="unit">単元</label>
+
+      <input
+        type="text"
+        id="unit"
+        placeholder="例：二次方程式">
+    </div>
+
+
+    <div class="form-group">
+      <label for="keywords">キーワード</label>
+
+      <input
+        type="text"
+        id="keywords"
+        placeholder="例：因数分解, 解の公式">
+    </div>
+
+
+    <div class="form-group">
+      <label for="page">問題集のページ</label>
+
+      <input
+        type="number"
+        id="page"
+        placeholder="例：24">
+    </div>
+
+
+    <div class="form-group">
+      <label for="problem">問題文</label>
+
+      <textarea
+        id="problem"
+        rows="8"
+        placeholder="問題文を入力してください"></textarea>
+    </div>
+
+
+    <div class="form-group answer-input">
+      <label for="answer">正答</label>
+
+      <textarea
+        id="answer"
+        rows="4"
+        placeholder="正答を入力してください"></textarea>
+
+      <p class="form-note">
+        ※将来的には写真から正答を自動取得できるようにします。
+      </p>
+    </div>
+
+
+    <div class="form-actions">
+      <a href="index.html" class="button secondary">
+        キャンセル
+      </a>
+
+      <button class="button primary" type="button" onclick="saveProblem()">
+        問題を保存
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <p>問題集ノート</p>
+  <small>Study Management Tool</small>
+</footer>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
