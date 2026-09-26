@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問題検索 | 問題集ノート</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">問題集ノート</a>
+
+    <nav>
+      <a href="materials.html">教材</a>
+      <a href="search.html" class="active">検索</a>
+      <a href="weak-problems.html">苦手問題</a>
+    </nav>
+  </div>
+</header>
+
+
+<main class="container">
+
+  <div class="page-header">
+    <p class="section-label">SEARCH</p>
+    <h1>問題を検索</h1>
+  </div>
+
+
+  <section class="search-box">
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="キーワードを入力">
+
+    <button class="button primary" onclick="searchProblems()">
+      検索
+    </button>
+
+  </section>
+
+
+  <section class="filter-area">
+
+    <select id="subjectFilter">
+      <option value="">すべての教科</option>
+      <option>数学</option>
+      <option>英語</option>
+      <option>化学</option>
+    </select>
+
+
+    <select id="unitFilter">
+      <option value="">すべての単元</option>
+      <option>二次方程式</option>
+      <option>関係代名詞</option>
+      <option>物質量</option>
+    </select>
+
+  </section>
+
+
+  <section class="section">
+
+    <div class="section-title">
+      <h2>検索結果</h2>
+      <span id="resultCount">3件</span>
+    </div>
+
+
+    <div class="problem-list">
+
+      <a href="#" class="problem-item">
+
+        <div class="problem-number">01</div>
+
+        <div class="problem-info">
+
+          <div class="problem-meta">
+            <span>数学</span>
+            <span>二次方程式</span>
+          </div>
+
+          <h3>次の方程式を解きなさい。</h3>
+
+        </div>
+
+        <span class="result bad">前回 ×</span>
+
+      </a>
+
+
+      <a href="#" class="problem-item">
+
+        <div class="problem-number">02</div>
+
+        <div class="problem-info">
+
+          <div class="problem-meta">
+            <span>数学</span>
+            <span>二次方程式</span>
+          </div>
+
+          <h3>二次方程式の解の公式を利用して解きなさい。</h3>
+
+        </div>
+
+        <span class="result good">前回 ○</span>
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <p>問題集ノート</p>
+  <small>Study Management Tool</small>
+</footer>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
